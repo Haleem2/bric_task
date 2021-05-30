@@ -44,7 +44,7 @@ class DataController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->save();
-        Mail::to('haleemessam@gmail.com')->send(new \App\Mail\CrudMail($details));
+        Mail::to('derk@bric.solutions')->send(new \App\Mail\CrudMail($details));
         return back()->with('success', 'data created successfully');
     }
 
@@ -84,7 +84,7 @@ class DataController extends Controller
         $input = $request->except('_token');
         if (!$data->update($input))
             return back()->with('error', 'error occured please try again');
-        Mail::to('haleemessam@gmail.com')->send(new \App\Mail\CrudMail($details));
+        Mail::to('derk@bric.solutions')->send(new \App\Mail\CrudMail($details));
         return back()->with('success', 'data updated successfuly');
     }
 

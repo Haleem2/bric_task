@@ -40,7 +40,7 @@ class SendMail extends Command
     {
         $details=['process'=>'2 houre','details'=>'hourly report for app'];
         
-        Mail::to('haleemessam@gmail.com')->send(new \App\Mail\CrudMail($details));
+        Mail::to('derk@bric.solutions')->send(new \App\Mail\CrudMail($details));
         $this->info('sending email every  hour');
         // \Log::info("Cron is working fine!");
     }
